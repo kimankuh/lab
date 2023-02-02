@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - List</title>
+    <link rel="stylesheet" href="css/guide_style.css">
+    <!-- Web Pay(2020) css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>    
+    <div class="g-content">
+        <div class="g-page-header">
+            <h2 class="g-h2">List</h2>
+        </div>        
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">결제수단 전체 목록 - Card type</h3>            
+            </div>
+            <p class="g-p">- card가 표시되는 링크타입 목록. .payments-box에 .-all 클래스 추가하여 사용</p>
+            <div class="g-section-body">
+                <!-- guide -->
+                <div class="payments-box -all" style="width:400px">
+                    <div class="payments">       
+                        <!-- 'new' 아이콘 표시 case : .-new -->
+                        <div class="payments__item -new">
+                            <a href="#none" class="payments__link">
+                                <div class="payments__thum" aria-hidden="ture">
+                                    <img src="../images/temp/img-pa-kbpaymoney-48-x-56@2x.png" alt="기프트 카드 이미지">
+                                </div>
+                                <div class="payments__info">
+                                    <div class="payments__name">
+                                        <span class="payments__title">신용/체크카드</span>
+                                    </div>
+                                    <div class="payments__number">10개 등록중</div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- 등록개수 표시 안되는 case : .-single -->
+                        <div class="payments__item -single">
+                            <a href="#none" class="payments__link">
+                                <div class="payments__thum" aria-hidden="ture">
+                                    <img src="../images/temp/img-pa-kbpaymoney-48-x-56@2x.png" alt="기프트 카드 이미지">
+                                </div>
+                                <div class="payments__info">
+                                    <div class="payments__name">
+                                        <span class="payments__title">기업공용카드</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>        
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">결제수단 목록 - Card type</h3>            
+            </div>
+            <p class="g-p">- card가 표시되는 basic 목록</p>
+            <div class="g-section-body">
+                <!-- guide -->
+                <div class="payments-box" style="width:400px">
+                    <ul class="payments">
+                        <li class="payments__item">
+                            <div class="payments__thum" aria-hidden="ture">
+                                <img src="../images/common/n1_img_gift_card.png" alt="기프트 카드 이미지">
+                            </div>
+                            <div class="payments__info">
+                                <div class="payments__name">
+                                    <span class="payments__logo" aria-hidden="ture"><img src="../images/icon/n1_ico_card_master.png" alt="카드 브랜드 로고"></span>
+                                    <span class="payments__title">원(ONE)체크카드 원(ONE)체크카드 원(ONE)체크카드</span>
+                                </div>
+                                <div class="payments__number"><span>신용</span>&nbsp;&nbsp;9445 - **** - **** - 1234</div>
+                            </div>
+                            <div class="payments__control">
+                                <label for="payments-02-01" class="f-chk -toggle checked">
+                                    <input type="checkbox" name="payments-02" id="payments-02-01" checked>
+                                </label>
+                            </div>
+                        </li>
+                        <!-- 거래정지 case : .payments__item에 .-disabled 클래스 추가 -->
+                        <li class="payments__item -disabled">
+                            <div class="payments__thum" aria-hidden="ture">
+                                <img src="../images/common/n1_img_gift_card.png" alt="기프트 카드 이미지">
+                            </div>
+                            <div class="payments__info">
+                                <div class="payments__name">
+                                    <span class="payments__title">원(ONE)체크카드 원(ONE)체크카드 원(ONE)체크카드</span>
+                                </div>
+                                <div class="payments__number">거래정지</div>
+                            </div>
+                            <div class="payments__control">
+                                <button type="button" class="button -optionary -type01">삭제</button>
+                            </div>
+                        </li>
+                        <!-- // 거래정지 case -->
+                    </ul>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+          
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">결제수단 목록 - Round type</h3>            
+            </div>
+            <p class="g-p">- Rounded 로고가 표시되는 경우 .-type02 클래스 추가하여 사용</p>
+            <p class="g-p">- Rounded 로고가 표시되는 링크타입 목록</p>
+            <div class="g-section-body">
+                <!-- guide -->
+                <div class="payments-box -type02" style="width:400px"><!-- [2021-08-02] 목록내 로고가 round 타입인 경우(목록 하단 버튼 있음) : .-type02 클래스 추가 -->
+                    <ul class="payments">
+                        <li class="payments__item">
+                            <div class="payments__thum" aria-hidden="ture">
+                                <img src="../images/temp/iconStockKb48@3x.png" alt="금융기관 로고">
+                            </div>
+                            <div class="payments__info">
+                                <div class="payments__name">
+                                    <span class="payments__title">원(ONE)체크카드 원(ONE)체크카드 원(ONE)체크카드</span>
+                                </div>
+                                <div class="payments__number"><span>신용</span>&nbsp;&nbsp;9445 - **** - **** - 1234</div>
+                            </div>
+                            <div class="payments__control">
+                                <label for="payments-02-01" class="f-chk -toggle">
+                                    <input type="checkbox" name="payments-02" id="payments-02-01">
+                                </label>
+                            </div>
+                        </li>
+                        <li class="payments__item">
+                            <div class="payments__thum" aria-hidden="ture">
+                                <img src="../images/temp/iconStockKb48@3x.png" alt="금융기관 로고">
+                            </div>
+                            <div class="payments__info">
+                                <div class="payments__name">
+                                    <span class="payments__title">원(ONE)체크카드 원(ONE)체크카드 원(ONE)체크카드</span>
+                                </div>
+                                <div class="payments__number"><span>신용</span>&nbsp;&nbsp;9445 - **** - **** - 1234</div>
+                            </div>
+                            <div class="payments__control">
+                                <label for="payments-03-01" class="f-chk -toggle">
+                                    <input type="checkbox" name="payments-03" id="payments-03-01">
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+          
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">결제수단 목록 - Round type</h3>            
+            </div>
+            <p class="g-p">- Rounded 로고가 표시되는 경우 .-type02 클래스 추가하여 사용</p>
+            <p class="g-p">- 목록 하단에 고정 버튼영역이 없는 경우 .-type03 클래스 추가하여 사용</p>
+            <div class="g-section-body">
+                <!-- guide -->
+                <div class="payments-box -type02 -all" style="width:400px">
+                    <div class="payments">       
+                        <div class="payments__item -single">
+                            <a href="#none" class="payments__link">
+                                <div class="payments__thum" aria-hidden="ture">
+                                    <img src="../images/icon/n1_ico_device_phone.png" alt="기기 아이콘">
+                                </div>
+                                <div class="payments__info">
+                                    <div class="payments__name">
+                                        <span class="payments__title">연결된 기기 1</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="payments__item -single">
+                            <a href="#none" class="payments__link">
+                                <div class="payments__thum" aria-hidden="ture">
+                                    <img src="../images/icon/n1_ico_device_phone.png" alt="기기 아이콘">
+                                </div>
+                                <div class="payments__info">
+                                    <div class="payments__name">
+                                        <span class="payments__title">연결된 기기 2</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+          
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">정의형 목록 - Rounded border type</h3>            
+            </div>
+            <p class="g-p">동일한 row에 '항목명 + 설명' 조합 목록</p>
+            <div class="g-section-body">
+                <!-- guide -->
+                <div class="define-align" style="width:430px">
+                    <ul class="define-list">
+                        <li class="define-list__item">
+                            <div class="define-list__label">충전 금액</div>
+                            <div class="define-list__data">
+                                <span class="define-list__text">6,000원</span>
+                                <span class="define-list__text -type02">수수료 무료 (무제한)</span>
+                            </div>
+                        </li>
+                        <li class="define-list__item">
+                            <div class="define-list__label">출금 계좌</div>
+                            <div class="define-list__data">
+                                <div class="define-list__logo" aria-hidden="true"><img src="../images/temp/iconStockKb48@3x.png" alt="은행 로고"></div>
+                                <p class="define-list__text"><span class="finance-name">하나금융투자</span> <span class="finance-account">1012938112233410129381122334</span></p>
+                            </div>
+                            <div class="define-list__func">
+                                <button type="button" class="define-list__button"><span class="_blind">출금 계좌 선택</span></button>
+                            </div>
+                        </li>
+                        <li class="define-list__item">
+                            <div class="define-list__label">출금 통장 메모</div>
+                            <div class="define-list__data">
+                                <span class="define-list__text">KB페이 충전</span>
+                            </div>
+                            <div class="define-list__func">
+                                <button type="button" class="define-list__button -edit" onclick="openLayer('layer01', this)"><span class="_blind">메모 수정</span></button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+        
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">정의형 목록 - Type02</h3>            
+            </div>
+            <p class="g-p">이용안내 화면에서 사용되며, .define-align에 .-type02 클래스 추가하여 사용 (목록 상단에 border 없음. 마지막 item 강조형)</p>
+            <div class="g-section-body">
+                <!-- guide -->
+                <div class="define-align -type02" style="width:430px">
+                    <ul class="define-list">
+                        <li class="define-list__item">
+                            <div class="define-list__label">KB Pay 머니</div>
+                            <div class="define-list__data">
+                                <span class="define-list__text">100,000원</span>
+                            </div>
+                        </li>
+                        <li class="define-list__item">
+                            <div class="define-list__label">비상금</div>
+                            <div class="define-list__data">
+                                <span class="define-list__text">100,000원</span>
+                            </div>
+                        </li>
+                        <!-- 마지막 아이템인 경우 : .-last 클래스 추가 -->
+                        <li class="define-list__item -last">
+                            <div class="define-list__label">충전 가능 금액</div>
+                            <div class="define-list__data">
+                                <span class="define-list__text">2,000,000원</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->        
+
+        <hr class="_hr" />
+          
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">정의형 목록 - Type03</h3>            
+            </div>
+            <p class="g-p">충전 완료 화면에서 사용되며, .define-align에 .-type03 클래스 추가하여 사용 (목록 상단에 border 있음)</p>
+            <div class="g-section-body">
+                <!-- guide -->
+                <div class="define-align -type03" style="width:430px">
+                    <ul class="define-list">
+                        <li class="define-list__item">
+                            <div class="define-list__label">수수료</div>
+                            <div class="define-list__data">
+                                <span class="define-list__text">무료</span>
+                            </div>
+                        </li>
+                        <li class="define-list__item">
+                            <div class="define-list__label">받는 계좌</div>
+                            <div class="define-list__data">
+                                <span class="define-list__text">KB Pay 머니</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+    </div>
+    <!-- // content -->
+
+<!-- script -->
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script src="./guide_script.js"></script>
+<script src="../js/ui.js"></script> <!-- 기존 js -->
+<script src="../js/commonUi.js"></script> <!-- 기존 js -->
+<script src="../js/webpay-ui.js"></script> <!-- [21-07-26] 웹페이 고도화. 신규 및 변경건 포함 -->
+</body>
+<html>
+    

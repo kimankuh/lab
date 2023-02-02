@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - Etc</title>
+    <link rel="stylesheet" href="css/guide_style.css">
+    <!-- Web Pay(2020) css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>    
+    <div class="g-content">
+        <div class="g-page-header">
+            <h2 class="g-h2">Etc</h2>
+        </div>  
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Link Text</h3>            
+            </div>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <ul>
+                    <li>
+                        <label for="payments-01-01" class="f-chk checked">
+                            <input type="checkbox" name="payments-01" id="payments-01-01" checked> 전체동의
+                        </label>
+                    </li>
+                    <li class="mt10">
+                        <label for="payments-01-02" class="f-chk">
+                            <input type="checkbox" name="payments-01" id="payments-01-02"> 전체동의
+                        </label>
+                    </li>
+                    <li class="mt10">
+                        <label for="payments-01-03" class="f-chk type02 checked">
+                            <input type="checkbox" name="payments-01" id="payments-01-03" checked> [필수] 개인(신용)정보 수집·이용·제공 동의서
+                        </label>
+                    </li>
+                    <li class="mt10">
+                        <label for="payments-01-04" class="f-chk type02">
+                            <input type="checkbox" name="payments-01" id="payments-01-04"> [필수] 개인(신용)정보 수집·이용·제공 동의서
+                        </label>
+                    </li>
+                </ul>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Checkbox - Toggle</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">Checkbox를 Toggle 버튼으로 사용하는 경우 .-toggle 클래스 추가</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <ul>
+                    <li>
+                        <label for="payments-02-01" class="f-chk -toggle checked">
+                            <input type="checkbox" name="payments-02" id="payments-02-01" checked>
+                        </label>
+                    </li>
+                    <li class="mt10">
+                        <label for="payments-02-02" class="f-chk -toggle">
+                            <input type="checkbox" name="payments-02" id="payments-02-02">
+                        </label>
+                    </li>
+                </ul>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+        
+        <!-- <div class="g-section" style="display:none">
+            <div class="g-section-header">
+                <h3 class="g-h3">Select &gt; Placeholder</h3>            
+            </div>
+
+            !-- 설명 --
+            <p class="g-p">첫 번째 option 아이템이 placeholder로 사용되는 경우. &lt;select&gt;에 부모에 .-placeholder 추가.</p>
+
+            <div class="g-section-body" style="width:400px">                
+                !-- guide --
+                <div class="form_text select _placeholder">
+                    <label for="form-select-01">할부</label>
+                    <select name="form-select-01" id="form-select-01" class="text">
+                        <option disabled selected hidden>할부 개월을 선택해 주세요.</option>!-- 첫번째 아이템이 placeholder --
+                        <option value="">일시불</option>
+                        <option value="">2개월</option>
+                        <option value="">3개월</option>                                    
+                    </select>
+                </div>
+                !-- // guide --
+            </div>
+        </div>
+        !-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">금액 입력</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">결제 또는 송금시 금액 입력하는 경우에 사용됨. 내용 입력시 '금액 + 원'으로 변경됨.</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <div class="fill-amount">
+                    <div class="fill-amount__form">
+                        <input type="tel" oninput="resizableInput(this)" class="fill-amount__input"><span class="fill-amount__unit">원</span>
+                    </div>
+                    <div class="fill-amount__placeholder">송금할 금액</div>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        
+    </div>
+    <!-- // content -->
+
+<!-- script -->
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script src="./guide_script.js"></script>
+<script src="../js/ui.js"></script> <!-- 기존 js -->
+<script src="../js/commonUi.js"></script> <!-- 기존 js -->
+<script src="../js/webpay-ui.js"></script> <!-- [21-07-26] 웹페이 고도화. 신규 및 변경건 포함 -->
+</body>
+<html>
+    

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - Layer Popup</title>
+    <link rel="stylesheet" href="css/guide_style.css">
+    <!-- Web Pay(2020) css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>    
+    <div class="g-content">
+        <div class="g-page-header">
+            <h2 class="g-h2">Layer Popup</h2>
+        </div>  
+        
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Basic Popup - 타이틀 O</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">- 기존(2020년) 레이어 팝업 변형 타입. 부모 div에 .-type02 클래스 추가하여 사용.</p>
+
+            <div class="g-section-body" style="width:400px">                
+                <!-- guide -->
+                <button type="button" onclick="openLayer('layer01', this)">팝업 열기</button>
+                
+                <!-- layer popup -->
+                <div class="l-dim"></div>
+
+                <div class="l-pop -type02" id="layer01" tabindex="0">
+                    <div class="l-pop-wrap">
+                        <div class="l-header">
+                            <h1 tabindex="0">메모 수정</h1>
+                            <button type="button" class="btn-type close" onclick="closeLayer('layer01')">닫기</button>
+                        </div>
+                        <div class="l-contents">                
+                            <div class="form_text mb8"> <!-- 오류 class :  'error' 추가 -->
+                                <label for="device-nickname">받는 통장 메모</label>
+                                <input type="text" id="device-nickname" class="text" value="KB Pay 머니 충전">
+                            </div>
+                        </div>
+                        <div class="l-bottom-group">
+                            <div class="btn-group">
+                                <button type="button" class="btn-type type01"><span>확인</span></button> <!-- 활성화 시 disabled 제거 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Basic Popup - 타이틀 X</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">- 기존(2020년) 레이어 팝업 변형 타입. 부모 div에 .-type02 클래스 추가하여 사용.</p>
+
+            <div class="g-section-body" style="width:400px">                
+                <!-- guide -->
+                <button type="button" onclick="openLayer('cancel-deduction', this)">팝업 열기</button>
+                
+                <!-- layer popup -->                
+                <div class="l-pop -type02" id="cancel-deduction" tabindex="0">
+                    <div class="l-pop-wrap">
+                        <h1 class="_blind">소득공제 신청 해지</h1>
+                        <div class="l-contents">                
+                            <p class="_text-normal -md">소득공제 신청을 해지하겠습니까?</p>
+                            <div class="payments-box">
+                                <ul class="payments">
+                                    <li class="payments__item -single">
+                                        <div class="payments__thum" aria-hidden="ture">
+                                            <img src="../images/temp/img-pa-giftcard-48-x-56@2x.png" alt="기프트카드">
+                                        </div>
+                                        <div class="payments__info">
+                                            <div class="payments__name">
+                                                <span class="payments__title">기프트카드</span>
+                                            </div>
+                                        </div>
+                                    </li>   
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="l-bottom-group">
+                            <div class="button-group">
+                                <button type="button" class="button -secondary -type04" onclick="closeLayer('cancel-deduction')">취소</button>
+                                <button type="button" class="button -secondary -type01">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Alert &gt; Type02</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">기존(2020년) 레이어 팝업 변형 타입. 부모 div에 .-type02 클래스 추가하여 사용.</p>
+
+            <div class="g-section-body" style="width:400px">                
+                <!-- guide -->
+                <button type="button" onclick="openLayer('alert01', this)">팝업 열기</button>
+                
+                <!-- layer popup -->
+                <!-- <div class="l-dim"></div> -->
+
+                <div class="l-pop-alert -type02" id="alert01" style="display: none;" tabindex="0">
+                    <div class="alert-wrap">
+                        <div class="alert-inner">
+                            <p class="msg01 align-c">
+                                <!-- [2021-08-10] 문구 변경됨 -->
+                                고객정보가 일치하지 않습니다. <br>다시 입력 또는 KB Pay 간편가입 해주세요.
+                            </p>
+            
+                            <div class="bottom-group pb0">
+                                <div class="btn-group">
+                                    <button type="button" class="btn-type type01" onclick="closeLayer('alert01')"><span>확인</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+    </div>
+    <!-- // content -->
+
+<!-- script -->
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script src="./guide_script.js"></script>
+<script src="../js/ui.js"></script> <!-- 기존 js -->
+<script src="../js/commonUi.js"></script> <!-- 기존 js -->
+<script src="../js/webpay-ui.js"></script> <!-- [21-07-26] 웹페이 고도화. 신규 및 변경건 포함 -->
+</body>
+<html>
+    

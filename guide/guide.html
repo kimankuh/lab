@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB Pay 퍼블가이드 (2021)</title>
+    <link rel="stylesheet" href="css/guide_style.css">
+</head>
+<body>    
+    <div class="g-wrap">
+        <div class="g-header">
+            <h1 class="g-h1">KB Pay 퍼블가이드 (2021) - Web Pay (PC)</h1>
+            <a href="../index.html" class="g-guide-link" target="_blank">퍼블현황판</a>
+        </div>   
+
+        <div class="g-contents">
+            <div class="g-contents-left">
+                <ul class="g-gnb">
+                    <li class="g-gnb-item -active"><a href="./guide_base.html" class="g-gnb-link" target="contents-right__iframe">기본 환경</a></li>
+                    
+                    <li class="g-gnb-item">
+                        <a href="./guide_paragraph.html" class="g-gnb-link" target="contents-right__iframe">Paragraph</a>
+                        <!-- <ul class="gnb-2depth__list">
+                            <li class="gnb-2depth__item"><a href="#none" class="gnb-2depth__link" target="contents-right__iframe">2depth menu</a></li>
+                            <li class="gnb-2depth__item"><a href="#none" class="gnb-2depth__link" target="contents-right__iframe">2depth menu</a></li>
+                            <li class="gnb-2depth__item"><a href="#none" class="gnb-2depth__link" target="contents-right__iframe">2depth menu</a></li>
+                        </ul> -->  
+                    </li>                  
+                    <li class="g-gnb-item"><a href="./guide_button.html" class="g-gnb-link" target="contents-right__iframe">Button</a></li>
+                    <li class="g-gnb-item"><a href="./guide_form.html" class="g-gnb-link" target="contents-right__iframe">Form</a></li>
+                    <li class="g-gnb-item"><a href="./guide_list.html" class="g-gnb-link" target="contents-right__iframe">List</a></li>
+                    <li class="g-gnb-item"><a href="./guide_layer_popup.html" class="g-gnb-link" target="contents-right__iframe">Layer popup</a></li>
+                    <!-- <li class="g-gnb-item"><a href="./guide_tab.html" class="g-gnb-link" target="contents-right__iframe">Tab</a></li>-->
+                    <!-- <li class="g-gnb-item"><a href="#none" class="g-gnb-link" target="contents-right__iframe">Bottom sheet</a></li> -->
+                    <!-- <li class="g-gnb-item"><a href="./guide_etc.html" class="g-gnb-link" target="contents-right__iframe">Etc</a></li> -->
+                </ul>
+            </div>
+            <!-- // g-contents-left -->
+        
+            <div class="g-contents-right">
+                <iframe src="./guide_base.html" frameborder="0" name="contents-right__iframe" class="g-contents-right__iframe"></iframe>
+            </div>
+            <!-- // g-contents-right -->
+        </div>
+        <!-- // g-contents -->
+    </div>
+    <!-- // wrap -->
+
+    <!-- script -->
+    <script src="../js/jquery-2.2.4.min.js"></script>
+    <script src="./guide_script.js"></script>    
+    <script>
+        var docsTotal = $('.status').length,
+            docsDone = $('.status[title="작업완료"]').length;
+    
+        $('.total-count__done').text(docsDone); // 취소건 제외하기
+        $('.total-count__all').text(docsTotal);
+    
+    </script>
+    
+</body>
+</html>

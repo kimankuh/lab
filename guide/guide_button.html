@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - Button</title>
+    <link rel="stylesheet" href="css/guide_style.css">
+    <!-- Web Pay(2020) css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>    
+    <div class="g-content">
+        <div class="g-page-header">
+            <h2 class="g-h2">Button</h2>
+        </div>        
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Primary</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">App 내 웹뷰에서만 사용됨. 버튼 높이 56px</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <ul>
+                    <li>
+                        <div class="button-group">
+                            <button type="button" class="button -primary">다운로드</button>
+                        </div>
+                    </li>
+                    <li class="mt10">
+                        <div class="button-group">
+                            <button type="button" class="button -primary">다운로드</button>
+                            <button type="button" class="button -primary -type01">결제하기</button>
+                        </div>
+                    </li>
+                    <li class="mt10">
+                        <div class="button-group">
+                            <button type="button" class="button -primary -type01">다운로드</button>
+                            <button type="button" class="button -primary -type02">결제하기</button>
+                            <button type="button" class="button -primary -type03">결제하기</button>
+                        </div>
+                    </li>
+                </ul>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+          
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Secondary</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">PC/Mobile 웹에서 사용됨. 버튼 높이 48px</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <ul>
+                    <li>
+                        <div class="button-group">
+                            <button type="button" class="button -secondary">다운로드</button>
+                        </div>
+                    </li>
+                    <li class="mt10">
+                        <div class="button-group">
+                            <button type="button" class="button -secondary">다운로드</button>
+                            <button type="button" class="button -secondary -type01">결제하기</button>
+                        </div>
+                    </li>
+                    <li class="mt10">
+                        <div class="button-group">
+                            <button type="button" class="button -secondary -type01">다운로드</button>
+                            <button type="button" class="button -secondary -type02">결제하기</button>
+                            <button type="button" class="button -secondary -type03">결제하기</button>
+                        </div>
+                    </li>
+                </ul>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+          
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Optionary</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">컴포넌트 구성 요소로서 보조적으로 사용되는 경우</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <ul class="g-list">
+                    <li class="g-list-item">
+                        <p class="g-p">- input 내 사용 case 1 / ex)주소 검색</p>
+                        <button type="button" class="button -optionary">검색</button>
+                    </li>
+                    <li class="g-list-item">
+                        <p class="g-p">- input 내 사용 case 2 / ex)레이어 팝업 호출</p>
+                        <button type="button" class="button -optionary -type02">CVC란?</button>
+                    </li>
+                    <li class="g-list-item">
+                        <p class="g-p">- list item 내 포함 case / ex)list item 삭제</p>
+                        <button type="button" class="button -optionary -type01">삭제</button>
+                    </li>
+                </ul>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+          
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Link Text</h3>            
+            </div>
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <button type="button" class="btn-line"><span>문자인증하기</span></button>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+          
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Tooltip</h3>            
+            </div>
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <h1>소득공제 신청
+                    <button class="button -tooltip -layer" onclick="openCommonLayer('caption-reauest-mutual', this)"><span class="_blind">유의사항</span></button>
+                </h1>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+          
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Scroll Button</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">컨텐츠 영역 내 스크롤 생성되는 case (only 결제수단 목록)</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <button type="button" class="scroll-button -down"><span class="_blind">아래로 스크롤 이동</span></button>
+                <button type="button" class="scroll-button -up"><span class="_blind">위로 스크롤 이동</span></button>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+    </div>
+    <!-- // content -->
+
+<!-- script -->
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script src="./guide_script.js"></script>
+<script src="../js/ui.js"></script> <!-- 기존 js -->
+<script src="../js/commonUi.js"></script> <!-- 기존 js -->
+<script src="../js/webpay-ui.js"></script> <!-- [21-07-26] 웹페이 고도화. 신규 및 변경건 포함 -->
+</body>
+<html>
+    

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - From</title>
+    <link rel="stylesheet" href="css/guide_style.css">
+    <!-- Web Pay(2020) css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>    
+    <div class="g-content">
+        <div class="g-page-header">
+            <h2 class="g-h2">Form</h2>
+        </div>  
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Input Text</h3>            
+            </div>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <div class="form_text">
+                    <label for="" class="form-text__label">이름</label>
+                    <input type="text" class="input-text -full" placeholder="이름을 입력해 주세요.">
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Input Text - 주민등록번호(뒤 6자리 마스킹)</h3>            
+            </div>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <style>
+                    .form_text.field-4 .text {vertical-align:top;}
+                </style>
+                <label for="" class="form-text__label">주민등록번호</label>
+                <div class="form-masking">                            
+                    <div class="form-masking__item -on">
+                        <input type="text" class="input-masking -full" maxlength="6" onfocus="maskingFocusOn(this)" onblur="maskingFocusOut(this)">
+                    </div>
+                    <span class="form-masking__dash" aria-hidden="true"></span>
+                    <div class="form-masking__item -on">
+                        <input type="text" class="input-masking" maxlength="1" onfocus="maskingFocusOn(this)" onblur="maskingFocusOut(this)">
+                        <div class="form-masking__combi">                                    
+                            <span class="form-masking__dot -on"></span>
+                            <span class="form-masking__dot -on"></span>
+                            <span class="form-masking__dot -on"></span>
+                            <span class="form-masking__dot -on"></span>
+                            <span class="form-masking__dot -on"></span>
+                            <span class="form-masking__dot -on"></span>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Input Text - 카드번호 16자리</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">[type="password"]로 마스킹 처리한 경우, chrome과 ie에서의 look이 다르게 표현됨. 미디어 쿼리로 font style 재정의 필요.</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <style>
+                [type="password"] {height:19px;font-size:15px;}
+                @media screen and (-webkit-min-device-pixel-ratio:0) {
+                    .card-number[type="password"],
+                    .-cvc[type="password"] {font-family:Verdana,sans-serif;font-size:31px;letter-spacing:-4px;}
+                }
+                </style>
+
+                <div class="form_text field-4">
+                    <label for="card_number">카드번호 16자리</label>
+                    <input type="text" class="text card-number" name="card_number" value="1111" id="card_number" maxlength="4" title="카드번호 첫번째 4자리">
+                    <span class="bar bar-1">-</span>
+                    <input type="password" class="text card-number" name="card_number" value="2222" maxlength="4" title="카드번호 두번째 4자리">
+                    <span class="bar bar-2">-</span>
+                    <input type="password" class="text card-number" name="card_number" value="3333" maxlength="4" title="카드번호 세번째 4자리">
+                    <span class="bar bar-3">-</span>
+                    <input type="text" class="text card-number" name="card_number" value="4444" maxlength="4" title="카드번호 네번째 4자리">
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Checkbox</h3>            
+            </div>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <ul>
+                    <li>
+                        <label for="payments-01-01" class="f-chk checked">
+                            <input type="checkbox" name="payments-01" id="payments-01-01" checked> 전체동의
+                        </label>
+                    </li>
+                    <li class="mt10">
+                        <label for="payments-01-02" class="f-chk">
+                            <input type="checkbox" name="payments-01" id="payments-01-02"> 전체동의
+                        </label>
+                    </li>
+                    <li class="mt10">
+                        <label for="payments-01-03" class="f-chk type02 checked">
+                            <input type="checkbox" name="payments-01" id="payments-01-03" checked> [필수] 개인(신용)정보 수집·이용·제공 동의서
+                        </label>
+                    </li>
+                    <li class="mt10">
+                        <label for="payments-01-04" class="f-chk type02">
+                            <input type="checkbox" name="payments-01" id="payments-01-04"> [필수] 개인(신용)정보 수집·이용·제공 동의서
+                        </label>
+                    </li>
+                </ul>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Checkbox - Toggle</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">Checkbox를 Toggle 버튼으로 사용하는 경우 .-toggle 클래스 추가</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <ul>
+                    <li>
+                        <label for="payments-02-01" class="f-chk -toggle checked">
+                            <input type="checkbox" name="payments-02" id="payments-02-01" checked>
+                        </label>
+                    </li>
+                    <li class="mt10">
+                        <label for="payments-02-02" class="f-chk -toggle">
+                            <input type="checkbox" name="payments-02" id="payments-02-02">
+                        </label>
+                    </li>
+                </ul>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+        
+        <!-- <div class="g-section" style="display:none">
+            <div class="g-section-header">
+                <h3 class="g-h3">Select &gt; Placeholder</h3>            
+            </div>
+
+            !-- 설명 --
+            <p class="g-p">첫 번째 option 아이템이 placeholder로 사용되는 경우. &lt;select&gt;에 부모에 .-placeholder 추가.</p>
+
+            <div class="g-section-body" style="width:400px">                
+                !-- guide --
+                <div class="form_text select _placeholder">
+                    <label for="form-select-01">할부</label>
+                    <select name="form-select-01" id="form-select-01" class="text">
+                        <option disabled selected hidden>할부 개월을 선택해 주세요.</option>!-- 첫번째 아이템이 placeholder --
+                        <option value="">일시불</option>
+                        <option value="">2개월</option>
+                        <option value="">3개월</option>                                    
+                    </select>
+                </div>
+                !-- // guide --
+            </div>
+        </div>
+        !-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Radio</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">.wrap에 .-wp 클래스 추가 필수. (2021년도 UI고도화를 위해 추가된 클래스)</p>
+
+            <div class="g-section-body" style="width:400px">
+                <div class="wrap -wp">
+                    <!-- guide -->
+                    <div class="form-group__item">
+                        <div class="form-rdo">
+                            <label for="" class="lb">우편물 수령처</label>
+                            <div class="rdoGroup rdo-group">
+                                <label for="" class="f-rdo checked"><input type="radio" id="" checked>자택</label>
+                                <label for="" class="f-rdo "><input type="radio" id="">직장</label>
+                                <label for="" class="f-rdo "><input type="radio" id="">이메일</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // guide -->
+                </div>                
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">Select</h3>            
+            </div>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <div class="form_text select"> <!-- 오류 class :  'error' 추가 -->
+                    <label for="ph">통신사</label>
+                    <select name="ph" id="ph" class="text">
+                        <option value="">선택</option>
+                        <option value="">SKT</option>
+                        <option value="">KT</option>                                    
+                        <option value="">LG U+</option>                                    
+                        <option value="">SKT 알뜰폰</option>                                    
+                        <option value="">KT 알뜰폰</option>                                    
+                        <option value="">LG U+ 알뜰폰</option>                                    
+                    </select>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">금액 입력</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">- 결제 또는 송금시 금액 입력하는 경우에 사용됨. 내용 입력시 '금액 + 원'으로 변경됨.</p>
+            <p class="g-p">- 금액 입력시 세자리마다 콤마 추가시 .fill-amount__input에  .-amount 클래스 추가</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <div class="fill-amount">
+                    <div class="fill-amount__form">
+                        <input type="tel" oninput="resizableInput(this)" class="fill-amount__input -amount"><span class="fill-amount__unit">원</span>
+                    </div>
+                    <div class="fill-amount__placeholder">송금할 금액</div>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        <hr class="_hr" />
+
+        <div class="g-section">
+            <div class="g-section-header">
+                <h3 class="g-h3">조합 case 1 - Select + Input</h3>            
+            </div>
+
+            <!-- 설명 -->
+            <p class="g-p">부모가 flex 속성 사용하는 경우 .form-group__item에 .-type02 클래스 추가</p>
+
+            <div class="g-section-body" style="width:400px">
+                <!-- guide -->
+                <div class="form-group__item -type02">
+                    <div class="form_text select"> <!-- 오류 class :  'error' 추가 -->
+                        <label for="ph">통신사</label>
+                        <select name="ph" id="ph" class="text">
+                            <option value="">선택</option>
+                            <option value="">SKT</option>
+                            <option value="">KT</option>                                    
+                            <option value="">LG U+</option>                                    
+                            <option value="">SKT 알뜰폰</option>                                    
+                            <option value="">KT 알뜰폰</option>                                    
+                            <option value="">LG U+ 알뜰폰</option>                                    
+                        </select>
+                    </div>
+                    <div class="form_text">
+                        <label for="" class="form-text__label">휴대폰번호</label>
+                        <input type="text" class="input-text -full -cellphone" maxlength="13" placeholder="휴대폰번호를 입력해 주세요.">
+                    </div>
+                </div>
+                <!-- // guide -->
+            </div>
+        </div>
+        <!-- // g-section -->
+
+        
+    </div>
+    <!-- // content -->
+
+<!-- script -->
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script src="./guide_script.js"></script>
+<script src="../js/ui.js"></script> <!-- 기존 js -->
+<script src="../js/commonUi.js"></script> <!-- 기존 js -->
+<script src="../js/webpay-ui.js"></script> <!-- [21-07-26] 웹페이 고도화. 신규 및 변경건 포함 -->
+</body>
+<html>
+    
